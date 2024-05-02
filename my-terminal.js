@@ -123,6 +123,16 @@ const commands = {
             this.error('Wrong directory');
         }
     },
+    credits() {
+        return [
+            '',
+            '<white>Used libraries:</white>',
+            '* <a href="https://terminal.jcubic.pl">jQuery Terminal</a>',
+            '* <a href="https://github.com/patorjk/figlet.js/">Figlet.js</a>',
+            '* <a href="https://github.com/jcubic/isomorphic-lolcat">Isomorphic Lolcat</a>',
+            ''
+        ].join('\n');
+    },
     echo(...args) {
         if (args.length > 0) {
             term.echo(args.join(' '));
@@ -212,6 +222,3 @@ function hex(color) {
         return n.toString(16).padStart(2, '0');
     }).join('');
 }
-
-
-github('jcubic/jquery.terminal');
